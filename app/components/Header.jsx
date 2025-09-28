@@ -14,8 +14,9 @@ export default function Header() {
 
   return (
     <div className="flex items-center  absolute z-50 m-2">
-      <div className="ml-52 mr-96 mt-4">
+      <div className="ml-52 mr-96 mt-4 flex text-2xl ">
         <Image src={teamLogo} alt="logo" />
+        <h1 className=" text-2xl text-blue-200 mt-7 ml-6">NEOSIS</h1>
       </div>
       <div className=" w-2xl h-14 flex items-center justify-center  ">
         <ul className="flex gap-10 text-gray-400 text-xl ">
