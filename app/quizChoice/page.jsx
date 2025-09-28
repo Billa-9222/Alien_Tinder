@@ -1,23 +1,13 @@
-<<<<<<< HEAD
 import Image from "next/image";
 import Link from "next/link";
-=======
-import Image from "next/image"
-import quizBg from "@/app/assets/quizBg.png"
-import einstein from "@/app/assets/einstein.png"
-import alien from "@/app/assets/alien.png"
-import eilien from "@/app/assets/eilien.png"
-import meteorBg from "@/app/assets/meteorBg.svg";
-
->>>>>>> 0d43d5b (created footer and adjusted header)
-
+import Image from "next/image";
 import quizBg from "@/app/assets/quizBg.png";
 import einstein from "@/app/assets/einstein.png";
 import alien from "@/app/assets/alien.png";
 import eilien from "@/app/assets/eilien.png";
+import meteorBg from "@/app/assets/meteorBg.svg";
 
 export default function Tests() {
-<<<<<<< HEAD
   return (
     <div id="quiz" className="container mx-auto w-screen h-screen relative">
       <Image
@@ -25,7 +15,6 @@ export default function Tests() {
         alt="starry-background"
         className="w-screen object-cover"
       />
-
       <div className="flex absolute top-48 left-36 gap-8">
         <Link href="/quiz">
           <Image src={einstein} alt="einsteinCard" className="cursor-pointer" />
@@ -38,8 +27,8 @@ export default function Tests() {
         <Link href="/quiz">
           <Image src={eilien} alt="eilienCard" className="cursor-pointer" />
         </Link>
-=======
-    return (
+      </div>
+      return (
       <div id="quiz" className="container mx-auto w-screen h-screen">
         <Image
           src={quizBg}
@@ -58,9 +47,12 @@ export default function Tests() {
           </div>
         </div>
         <div>
-          <Image src={meteorBg} alt="meteor" className="absolute mt-80 top-96" />
+          <Image
+            src={meteorBg}
+            alt="meteor"
+            className="absolute mt-80 top-96"
+          />
         </div>
->>>>>>> 0d43d5b (created footer and adjusted header)
       </div>
     </div>
   );
