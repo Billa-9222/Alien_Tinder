@@ -6,7 +6,7 @@ import teamLogo from "@/app/assets/teamLogo.svg";
 export default function Header() {
   const links = [
     { id: "home", text: "Home", link: "/HomePage" },
-    { id: "lessons", text: "Lessons", link: "/Lessons" },
+    { id: "lessons", text: "Lessons", link: "/factualQuestions" },
     { id: "quiz", text: "Quizes", link: "/quizChoice" },
     // { id: "Games", text: "Games", link: "/Games" },
     { id: "results", text: "Results", link: "/Results" },
