@@ -9,7 +9,7 @@ export default function Header() {
     { id: "lessons", text: "Lessons", link: "/Lessons" },
     { id: "quiz", text: "Quizes", link: "/quizChoice" },
     // { id: "Games", text: "Games", link: "/Games" },
-    { id: "results", text: "Results", link: "/Results" },
+    { id: "results", text: "Results", link: "/meteors" },
   ];
 
   return (
