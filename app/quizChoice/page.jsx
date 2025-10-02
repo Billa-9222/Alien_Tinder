@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import meteorBg from "@/app/assets/meteorBg.svg";
 import quizBg from "@/app/assets/quizBg.png";
 import einstein from "@/app/assets/einstein.png";
 import alien from "@/app/assets/alien.png";
@@ -8,7 +8,7 @@ import eilien from "@/app/assets/eilien.png";
 
 export default function Tests() {
   return (
-    <div id="quiz" className="container mx-auto w-screen h-screen relative">
+    <div id="quiz" className="container mx-auto w-screen relative">
       <Image
         src={quizBg}
         alt="starry-background"
@@ -27,6 +27,13 @@ export default function Tests() {
         <Link href="/conAndFactQuestions">
           <Image src={eilien} alt="eilienCard" className="cursor-pointer" />
         </Link>
+      </div>
+      <div>
+        <Image
+          src={meteorBg}
+          alt="meteor images"
+          className="absolute z-20 bottom-1/12"
+        />
       </div>
     </div>
   );
