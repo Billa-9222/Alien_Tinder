@@ -54,7 +54,6 @@ export default function MeteoritePage() {
         <p className="text-lg leading-relaxed whitespace-pre-line">
           {m.sections.significance}
         </p>
-        <section></section>
       </div>
     </div>
   );
