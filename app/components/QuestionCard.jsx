@@ -1,6 +1,8 @@
-export default function QuestionCard({ question, answers }) {
+"use client";
+
+export default function QuestionCard({ question, answers, selected, onSelect }) {
   return (
-    <div className="bg-[url('/questionCube.png')] bg-contain bg-no-repeat min-h-[340px] w-2xl p-10 text-white   ">
+    <div className="bg-[url('/questionCube.png')] bg-contain bg-no-repeat min-h-[340px] w-2xl p-10 text-white">
       <h2 className="text-2xl font-semibold mb-2">{question}</h2>
       <div className="flex flex-col space-y-2">
         {answers.map((answer, index) => (
@@ -8,8 +10,14 @@ export default function QuestionCard({ question, answers }) {
             key={index}
             className="flex items-center space-x-2 cursor-pointer text-xl"
           >
-            <input type="radio" name="question" className="accent-purple-400" />
-            <span>{answer}</span>
+            <input
+              type="radio"
+              name={question}
+              className="accent-purple-400"
+              checked={selected === answer.meteor}
+              onChange={() => onSelect(answer.meteor)}
+            />
+            <span>{answer.text}</span>
           </label>
         ))}
       </div>
