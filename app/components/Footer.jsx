@@ -37,6 +37,7 @@ export default function Footer() {
             <li className="text-2xl">FOLLOW</li>
             <li>
               <Image src={insta} alt="insta" width={90} height={80} />
+              <p>@komron.n7</p>
             </li>
           </ul>
         </div>
@@ -44,3 +45,5 @@ export default function Footer() {
     </div>
   );
 }
+
+
