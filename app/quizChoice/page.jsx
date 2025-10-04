@@ -8,7 +8,7 @@ import eilien from "@/app/assets/eilien.png";
 
 export default function Tests() {
   return (
-    <div id="quiz" className="container mx-auto w-screen relative">
+    <div id="quiz" className=" w-screen relative">
       <Image
         src={quizBg}
         alt="starry-background"

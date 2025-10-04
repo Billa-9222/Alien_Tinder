@@ -8,7 +8,7 @@ export default function Main() {
     <div>
       <div
         id="home"
-        className="container mx-auto  w-screen h-screen  relative"
+        className="w-screen h-screen  relative"
       >
         <div>
           <Image src={MainImg} alt="Main-image" className="w-screen h-screen object-cover " />

@@ -108,28 +108,48 @@ The Widmanstätten patterns make it visually striking — like layers or filigre
     },
   },
 
-  storyseeker: {
-    persionality: "Story Seeker",
-    name: "Cape York",
-    image: "/capeYork.png",
+  truthseeker: {
+    persionality: "Seeker of Truth",
+    name: "Bennu",
+    image: "/bennu.png",
     sections: {
-      matchInfo: ` Why Cape York matches you
-You are steadfast, classic, and rooted in tradition with an epic story. Like Cape York, 
-you carry weight — of history, persistence, impact. People see your legacy and feel 
-your strength.`,
-      profile: `Name: Cape York
-Discovery / Found Year: Known to indigenous Inuit people for centuries; scientific acquisition in late 19th century
-Location: Near Cape York, Greenland
-Observed Fall: No
-Total Known Mass (Tkw): ~58,000 kg originally (several massive pieces)`,
-      classification: `Type: Iron meteorite (octahedrite)
-Structure: Large metallic bodies with smooth surfaces, often with weathering.
-Composition: Iron and nickel alloy; includes trace elements common to iron 
-meteorites`,
-      significance: ` Among the largest meteorites ever recovered.
-Several huge fragments were used by local Inuit for toolmaking historically.
- Pieces such as “Ahnighito” (≈31 tons) were transported to museums for display.
- Its sheer scale and human-cultural connection make it legendary.`,
+      matchInfo: `Why Bennu matches you
+You are mysterious, ancient, and hold treasures deep within. Like Bennu, you embody both risk and opportunity.
+ People see you and feel the weight of cosmic history and the promise of knowledge.`,
+      profile: `Name: (101955) Bennu
+Discovery / Found Year: Discovered in 1999 by the LINEAR survey program
+Location: Near-Earth asteroid, Apollo group
+Predicted Fall: Models suggest possible Earth approaches in late 22nd century (notably 2182), though chances are very small
+Total Known Mass (Tkw): Diameter about 500 meters; mass estimated around 7.3 × 10¹⁰ kg`,
+      classification: `Type: Carbonaceous asteroid (B-type)
+Structure: Rubble-pile body made of loosely bound rock fragments and dust
+Composition: Rich in carbon compounds, hydrated minerals, and possibly organic molecules`,
+      significance: `Target of NASA’s OSIRIS-REx mission, which returned a sample to Earth in 2023.
+Its dark, rough surface contrasts with bright rocky asteroids, giving it a distinctive visual profile.
+Scientifically important for understanding the origins of organic material and water in the solar system.
+Considered a “potentially hazardous asteroid,” but also one of the most studied and imaged objects of its kind.`,
+    },
+  },
+
+  explorer: {
+    persionality: "The Explorer",
+    name: "2024 YR4",
+    image: "/yr4.png",
+    sections: {
+      matchInfo: `Why 2024 YR4 matches you
+You are dynamic, full of potential, and closely watched. Like 2024 YR4, you carry the sense of
+ anticipation — of what could be. People see you and feel the tension between possibility and destiny.`,
+      profile: `Name: 2024 YR4
+Discovery / Found Year: Detected in December 2024 by sky surveys
+Location: Near-Earth object, orbit crossing Earth’s path
+Predicted Fall: Monitored for potential close approaches in the coming decades; no confirmed fall date, but studied for impact risk
+Total Known Mass (Tkw): Estimated size 50–120 meters across (mass not precisely known)`,
+      classification: `Type: Near-Earth asteroid (Apollo group)
+Structure: Rocky body, irregular shape typical of small asteroids
+Composition: Assumed stony (silicate-rich) like many NEAs, but exact composition not yet sampled`,
+      significance: `Identified as one of the near-Earth objects with a small but nonzero chance of future impact.
+Studied through orbital tracking for planetary defense readiness.
+Its recent discovery highlights how new celestial visitors are still being found, showing how dynamic our skies remain.`,
     },
   },
 };
