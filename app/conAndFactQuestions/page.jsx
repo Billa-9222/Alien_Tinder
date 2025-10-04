@@ -22,16 +22,28 @@ export default function ConFactQuestions() {
         "If meteorites are messengers, who are they delivering messages from?",
       answers: [
         { text: "Civilizations older than the Milky Way", meteor: "scholar" },
-        { text: "Alternate versions of ourselves in parallel universes", meteor: "storyseeker" },
-        { text: "The universe itself, teaching us its secrets", meteor: "artist" },
-        { text: "A future Earth, warning us about what’s coming", meteor: "warrior" },
+        {
+          text: "Alternate versions of ourselves in parallel universes",
+          meteor: "storyseeker",
+        },
+        {
+          text: "The universe itself, teaching us its secrets",
+          meteor: "artist",
+        },
+        {
+          text: "A future Earth, warning us about what’s coming",
+          meteor: "warrior",
+        },
       ],
     },
     {
       question: "What is strange about the Willamette meteorite in the USA?",
       answers: [
         { text: "It’s hollow inside", meteor: "artist" },
-        { text: "It has giant pits formed by acid rain on Earth", meteor: "warrior" },
+        {
+          text: "It has giant pits formed by acid rain on Earth",
+          meteor: "warrior",
+        },
         { text: "It glows in the dark", meteor: "scholar" },
         { text: "It contains living microbes", meteor: "paternseer" },
       ],
@@ -42,7 +54,10 @@ export default function ConFactQuestions() {
       answers: [
         { text: "They unlock hidden psychic abilities", meteor: "artist" },
         { text: "They bind your fate to the stars", meteor: "scholar" },
-        { text: "They erase parts of your memory to keep secrets hidden", meteor: "storyseeker" },
+        {
+          text: "They erase parts of your memory to keep secrets hidden",
+          meteor: "storyseeker",
+        },
         { text: "They unlock hidden psychic abilities", meteor: "paternseer" },
       ],
     },
@@ -53,7 +68,10 @@ export default function ConFactQuestions() {
         { text: "NASA and other space agencies", meteor: "scholar" },
         { text: "Ancient secret societies", meteor: "warrior" },
         { text: "Billionaires planning space colonies", meteor: "artist" },
-        { text: "No one — because it’s buried deep inside our subconscious", meteor: "storyseeker" },
+        {
+          text: "No one — because it’s buried deep inside our subconscious",
+          meteor: "storyseeker",
+        },
       ],
     },
     {
@@ -61,7 +79,10 @@ export default function ConFactQuestions() {
         "What do some lunar and Martian meteorites on Earth have in common?",
       answers: [
         { text: "They are made of pure diamond", meteor: "artist" },
-        { text: "They match rocks collected by Apollo missions", meteor: "scholar" },
+        {
+          text: "They match rocks collected by Apollo missions",
+          meteor: "scholar",
+        },
         { text: "They are invisible to the naked eye", meteor: "paternseer" },
         { text: "They carry alien carvings", meteor: "storyseeker" },
       ],
@@ -72,7 +93,10 @@ export default function ConFactQuestions() {
       answers: [
         { text: "They camouflage themselves", meteor: "paternseer" },
         { text: "They melt into ice instantly", meteor: "warrior" },
-        { text: "They look just like black rocks on white ice", meteor: "scholar" },
+        {
+          text: "They look just like black rocks on white ice",
+          meteor: "scholar",
+        },
         { text: "They sink deep under glaciers immediately", meteor: "artist" },
       ],
     },
@@ -120,11 +144,10 @@ export default function ConFactQuestions() {
 
       <button
         onClick={handleSubmit}
-        className="w-48 h-18 text-3xl text-white font-semibold border-2 border-fuchsia-500 rounded-full mt-10 mb-20"
+        className="w-48 h-18 text-3xl text-fuchsia-200 font-semibold border-2 border-fuchsia-500 rounded-full mt-10 mb-20 hover:text-fuchsia-400"
       >
         SUBMIT
       </button>
     </div>
   );
 }
-

@@ -10,14 +10,27 @@ export default function FactualQuestions() {
     {
       question: "What’s the largest meteorite ever found on Earth?",
       answers: [
-        { text: "The Hoba meteorite in Namibia (about 60 tons)", meteor: "scholar" },
-        { text: "The Gibeon meteorite in Botswana (30 tons)", meteor: "paternseer" },
-        { text: "The Willamette meteorite in the USA (15 tons)", meteor: "warrior" },
-        { text: "The Chelyabinsk meteorite in Russia (10 tons)", meteor: "artist" },
+        {
+          text: "The Hoba meteorite in Namibia (about 60 tons)",
+          meteor: "scholar",
+        },
+        {
+          text: "The Gibeon meteorite in Botswana (30 tons)",
+          meteor: "paternseer",
+        },
+        {
+          text: "The Willamette meteorite in the USA (15 tons)",
+          meteor: "warrior",
+        },
+        {
+          text: "The Chelyabinsk meteorite in Russia (10 tons)",
+          meteor: "artist",
+        },
       ],
     },
     {
-      question: "Some meteorites contain the “ingredients of life.” What exactly has been discovered inside them?",
+      question:
+        "Some meteorites contain the “ingredients of life.” What exactly has been discovered inside them?",
       answers: [
         { text: "DNA strands", meteor: "storyseeker" },
         { text: "Amino acids", meteor: "scholar" },
@@ -26,11 +39,15 @@ export default function FactualQuestions() {
       ],
     },
     {
-      question: "What unusual fact about meteorites makes them hard to spot in Antarctica?",
+      question:
+        "What unusual fact about meteorites makes them hard to spot in Antarctica?",
       answers: [
         { text: "They camouflage themselves", meteor: "paternseer" },
         { text: "They melt into ice instantly", meteor: "warrior" },
-        { text: "They look just like black rocks on white ice", meteor: "scholar" },
+        {
+          text: "They look just like black rocks on white ice",
+          meteor: "scholar",
+        },
         { text: "They sink deep under glaciers immediately", meteor: "artist" },
       ],
     },
@@ -44,7 +61,8 @@ export default function FactualQuestions() {
       ],
     },
     {
-      question: "Some meteorites contain precious metals. Which one is especially common in them, but rare on Earth’s surface?",
+      question:
+        "Some meteorites contain precious metals. Which one is especially common in them, but rare on Earth’s surface?",
       answers: [
         { text: "Gold", meteor: "artist" },
         { text: "Platinum", meteor: "paternseer" },
@@ -53,11 +71,15 @@ export default function FactualQuestions() {
       ],
     },
     {
-      question: "Why do scientists think a meteorite might have helped start life on Earth?",
+      question:
+        "Why do scientists think a meteorite might have helped start life on Earth?",
       answers: [
         { text: "It carried water and organic molecules", meteor: "scholar" },
         { text: "It seeded bacteria from Mars", meteor: "artist" },
-        { text: "It released cosmic energy that made DNA", meteor: "storyseeker" },
+        {
+          text: "It released cosmic energy that made DNA",
+          meteor: "storyseeker",
+        },
         { text: "It altered Earth’s gravity", meteor: "warrior" },
       ],
     },
@@ -111,7 +133,7 @@ export default function FactualQuestions() {
 
       <button
         onClick={handleSubmit}
-        className="w-48 h-18 text-3xl text-white font-semibold border-2 border-fuchsia-500 rounded-full mt-10 mb-20"
+        className="w-48 h-18 text-3xl text-fuchsia-200 font-semibold border-2 border-fuchsia-500 rounded-full mt-10 mb-20 hover:text-fuchsia-400"
       >
         SUBMIT
       </button>
