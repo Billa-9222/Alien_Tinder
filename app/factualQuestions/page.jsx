@@ -98,27 +98,30 @@ export default function FactualQuestions() {
 
   return (
     <div className="min-h-screen bg-[url('/longBg.png')] bg-cover flex flex-col items-center pt-32">
-      <h1 className="text-4xl text-center text-white w-1/2 mt-20 mb-20">
+      <h1 className="text-5xl text-center  text-white w-1/2 mt-10 mb-16 leading-relaxed">
         CHOOSE THE MOST ACCURATE STATEMENT ACCORDING TO YOU
       </h1>
 
-      {questions.map((q, index) => (
-        <QuestionCard
-          key={index}
-          question={q.question}
-          answers={q.answers}
-          selected={answers[index]}
-          onSelect={(meteor) => handleSelect(index, meteor)}
-        />
-      ))}
+        {questions.map((q, index) => (
+          <QuestionCard
+            key={index}
+            question={q.question}
+            answers={q.answers}
+            selected={answers[index]}
+            onSelect={(meteor) => handleSelect(index, meteor)}
+          />
+        ))}
+     
 
       <button
         onClick={handleSubmit}
         disabled={!allAnswered}
         className={`w-48 h-18 text-3xl font-semibold border-2 rounded-full mt-10 mb-20 
-          ${allAnswered 
-            ? "text-white border-fuchsia-500 hover:bg-fuchsia-600 hover:text-black" 
-            : "text-gray-400 border-gray-600 cursor-not-allowed"}`}
+          ${
+            allAnswered
+              ? "text-white border-fuchsia-500 hover:bg-fuchsia-600 hover:text-black"
+              : "text-gray-400 border-gray-600 cursor-not-allowed"
+          }`}
       >
         SUBMIT
       </button>

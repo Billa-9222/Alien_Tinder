@@ -95,7 +95,8 @@ export default function ConFactQuestions() {
         { text: "They melt into ice instantly", meteor: "warrior" },
         {
           text: "They look just like black rocks on white ice",
-          meteor: "scholar" },
+          meteor: "scholar",
+        },
         { text: "They sink deep under glaciers immediately", meteor: "artist" },
       ],
     },
@@ -134,7 +135,7 @@ export default function ConFactQuestions() {
 
   return (
     <div className="min-h-screen bg-[url('/longBg.png')] bg-cover flex flex-col items-center pt-32">
-      <h1 className="text-4xl text-center text-white w-1/2 mt-20 mb-20">
+      <h1 className="text-5xl text-center text-white w-1/2 mt-10 mb-16 leading-relaxed">
         CHOOSE THE MOST ACCURATE STATEMENT ACCORDING TO YOU
       </h1>
 
