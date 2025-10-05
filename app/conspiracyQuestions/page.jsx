@@ -100,7 +100,7 @@ export default function ConspiracyQuestions() {
   };
 
   return (
-    <div className="min-h-screen bg-[url('/longBg.png')] bg-cover flex flex-col items-center pt-32">
+    <div className="min-h-screen bg-[url('/longBg.png')] bg-cover bg-center flex flex-col items-center pt-32">
       <h1 className="text-5xl text-center text-white w-1/2 mt-10 mb-16 leading-relaxed">
         CHOOSE THE MOST ACCURATE STATEMENT ACCORDING TO YOU
       </h1>

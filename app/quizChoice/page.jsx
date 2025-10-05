@@ -17,15 +17,27 @@ export default function Tests() {
 
       <div className="flex absolute top-48 left-36 gap-8">
         <Link href="/factualQuestions">
-          <Image src={einstein} alt="einsteinCard" className="cursor-pointer" />
+          <Image
+            src={einstein}
+            alt="einsteinCard"
+            className="cursor-pointer hover:scale-105 transform transition duration-300 "
+          />
         </Link>
 
         <Link href="/conspiracyQuestions">
-          <Image src={alien} alt="alienCard" className="mt-56 cursor-pointer" />
+          <Image
+            src={alien}
+            alt="alienCard"
+            className="mt-56 cursor-pointer hover:scale-105 transform transition duration-300"
+          />
         </Link>
 
         <Link href="/conAndFactQuestions">
-          <Image src={eilien} alt="eilienCard" className="cursor-pointer" />
+          <Image
+            src={eilien}
+            alt="eilienCard"
+            className="cursor-pointer hover:scale-105 transform transition duration-300"
+          />
         </Link>
       </div>
       <div>

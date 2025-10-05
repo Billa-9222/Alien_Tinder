@@ -24,7 +24,9 @@ export default function RootLayout({ children }) {
       <body className={` antialiased  overflow-x-hidden`}>
         <div className="max-w-screen-2xl w-full">
           <Header />
-          <main> {children}</main>
+          <div className="w-full">
+            <main> {children}</main>
+          </div>
           <Footer />
         </div>
       </body>
