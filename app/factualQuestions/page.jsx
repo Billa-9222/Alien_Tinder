@@ -1,7 +1,6 @@
 "use client";
 
 import QuestionCard from "../components/QuestionCard";
-import METEORITES from "../data/page";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -10,7 +9,7 @@ export default function FactualQuestions() {
     {
       question: "What’s the largest meteorite ever found on Earth?",
       answers: [
-        { text: "The Hoba meteorite in Namibia (about 60 tons)", meteor: "scholar" },
+        { text: "The Hoba meteorite in Namibia (about 60 tons)", meteor: "truthseeker" },
         { text: "The Gibeon meteorite in Botswana (30 tons)", meteor: "paternseer" },
         { text: "The Willamette meteorite in the USA (15 tons)", meteor: "warrior" },
         { text: "The Chelyabinsk meteorite in Russia (10 tons)", meteor: "artist" },
@@ -21,7 +20,7 @@ export default function FactualQuestions() {
       answers: [
         { text: "DNA strands", meteor: "storyseeker" },
         { text: "Amino acids", meteor: "scholar" },
-        { text: "Bacteria", meteor: "artist" },
+        { text: "Bacteria", meteor: "truthseeker" },
         { text: "Fungi", meteor: "paternseer" },
       ],
     },
@@ -39,7 +38,7 @@ export default function FactualQuestions() {
       answers: [
         { text: "4.5 billion years", meteor: "scholar" },
         { text: "2 billion years", meteor: "paternseer" },
-        { text: "500 billion years", meteor: "artist" },
+        { text: "500 billion years", meteor: "explorer" },
         { text: "65 billion years", meteor: "storyseeker" },
       ],
     },
@@ -73,13 +72,20 @@ export default function FactualQuestions() {
   ];
 
   const [answers, setAnswers] = useState({});
+  const [warning, setWarning] = useState("");
   const router = useRouter();
 
   const handleSelect = (qIndex, meteor) => {
     setAnswers({ ...answers, [qIndex]: meteor });
+    setWarning(""); // убираем предупреждение при выборе
   };
 
   const handleSubmit = () => {
+    if (Object.keys(answers).length < questions.length) {
+      setWarning("⚠️ You must answer all questions before submitting.");
+      return;
+    }
+
     const scores = {};
     Object.values(answers).forEach((meteor) => {
       scores[meteor] = (scores[meteor] || 0) + 1;
@@ -93,7 +99,6 @@ export default function FactualQuestions() {
     router.push("/meteors");
   };
 
-  // Проверка: все ли вопросы отвечены
   const allAnswered = Object.keys(answers).length === questions.length;
 
   return (
@@ -112,22 +117,19 @@ export default function FactualQuestions() {
         />
       ))}
 
+      {warning && <p className="text-red-400 mt-4">{warning}</p>}
+
       <button
         onClick={handleSubmit}
         disabled={!allAnswered}
-        className={`w-48 h-18 text-3xl font-semibold border-2 rounded-full mt-10 mb-20 
-          ${allAnswered 
-            ? "text-white border-fuchsia-500 hover:bg-fuchsia-600 hover:text-black" 
-            : "text-gray-400 border-gray-600 cursor-not-allowed"}`}
+        className={`w-48 h-18 text-3xl text-fuchsia-200 font-semibold border-2 rounded-full mt-10 mb-20 ${
+          allAnswered
+            ? "border-fuchsia-500 hover:text-fuchsia-400"
+            : "opacity-50 cursor-not-allowed border-gray-600"
+        }`}
       >
         SUBMIT
       </button>
-
-      {!allAnswered && (
-        <p className="text-red-400 text-lg mt-4">
-          ⚠️ You must answer all questions before submitting.
-        </p>
-      )}
     </div>
   );
 }
