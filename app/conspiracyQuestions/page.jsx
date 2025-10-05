@@ -1,7 +1,6 @@
 "use client";
 
 import QuestionCard from "../components/QuestionCard";
-import METEORITES from "../data/page";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -11,7 +10,7 @@ export default function ConspiracyQuestions() {
       question: "What do you think meteorites really are?",
       answers: [
         { text: "Secret alien technology scattered across Earth", meteor: "artist" },
-        { text: "Messages carved by ancient civilizations and launched into space", meteor: "scholar" },
+        { text: "Messages carved by ancient civilizations and launched into space", meteor: "explorer" },
         { text: "Cosmic eggs waiting to hatch life forms", meteor: "storyseeker" },
         { text: "Broken pieces of a destroyed planet hiding the truth of our origins", meteor: "warrior" },
       ],
@@ -20,7 +19,7 @@ export default function ConspiracyQuestions() {
       question: "Why do you think governments collect meteorites so quickly after a fall?",
       answers: [
         { text: "To hide evidence of alien contact", meteor: "scholar" },
-        { text: "To use rare metals for secret advanced weapons", meteor: "warrior" },
+        { text: "To use rare metals for secret advanced weapons", meteor: "truthseeker" },
         { text: "Because meteorites are keys to time travel", meteor: "artist" },
         { text: "To keep humanity from realizing its cosmic destiny", meteor: "storyseeker" },
       ],
@@ -47,7 +46,7 @@ export default function ConspiracyQuestions() {
       question: "If meteorites carry hidden powers, what kind of power do they bring?",
       answers: [
         { text: "Time distortion and glimpses into the past", meteor: "storyseeker" },
-        { text: "Emotional amplification — turning fear or joy into extremes", meteor: "artist" },
+        { text: "Emotional amplification — turning fear or joy into extremes", meteor: "explorer" },
         { text: "The ability to bend gravity in small ways", meteor: "warrior" },
         { text: "Access to collective universal memory", meteor: "scholar" },
       ],
@@ -64,7 +63,7 @@ export default function ConspiracyQuestions() {
     {
       question: "Why do people feel fascinated when they see a meteor streak across the sky?",
       answers: [
-        { text: "It triggers ancient memories buried in our DNA", meteor: "storyseeker" },
+        { text: "It triggers ancient memories buried in our DNA", meteor: "truthseeker" },
         { text: "It’s a universal sign that someone is watching us", meteor: "scholar" },
         { text: "Our souls recognize them as lost companions", meteor: "artist" },
         { text: "Because deep down, we know they’re messages written in fire", meteor: "warrior" },
@@ -78,7 +77,7 @@ export default function ConspiracyQuestions() {
 
   const handleSelect = (qIndex, meteor) => {
     setAnswers({ ...answers, [qIndex]: meteor });
-    setWarning(""); // убираем предупреждение, если выбрали
+    setWarning(""); 
   };
 
   const handleSubmit = () => {
@@ -87,7 +86,6 @@ export default function ConspiracyQuestions() {
       return;
     }
 
-    // Подсчет
     const scores = {};
     Object.values(answers).forEach((meteor) => {
       scores[meteor] = (scores[meteor] || 0) + 1;
@@ -121,6 +119,7 @@ export default function ConspiracyQuestions() {
 
       <button
         onClick={handleSubmit}
+        disabled={Object.keys(answers).length < questions.length}
         className={`w-48 h-18 text-3xl text-fuchsia-200 font-semibold border-2 border-fuchsia-500 rounded-full mt-10 mb-20 hover:text-fuchsia-400 ${
           Object.keys(answers).length < questions.length
             ? "opacity-50 cursor-not-allowed"
