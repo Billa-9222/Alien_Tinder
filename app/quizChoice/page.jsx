@@ -15,7 +15,7 @@ export default function Tests() {
         className="w-screen object-cover"
       />
 
-      <div className="flex absolute top-48 left-36 gap-8">
+      <div className="flex absolute top-48 left-36 right-36 gap-8">
         <Link href="/factualQuestions">
           <Image
             src={einstein}
